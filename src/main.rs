@@ -28,14 +28,13 @@ fn regex(input: &str)->&str {
 fn main(){
     let input = io::stdin();
     let mut number = String::new();
-    println!("Enter the what you are: ");
+    println!("Enter the string: ");
     input.read_line(&mut number).expect("Plz Enter");
     let _type_of_variable = typecheck(&number);
     println!("{_type_of_variable}");
     let trimed_input = number.trim();
     let type_of_var:&str = regex(&trimed_input);
     println!("The type is {type_of_var}");    
-
 }
 
 
